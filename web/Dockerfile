@@ -1,4 +1,7 @@
 FROM php:7.2.1-apache
+
+MAINTAINER Simon Berton <simonberton@gmail.com>
+
 RUN apt-get update
 RUN apt-get install -y vim git libzip-dev zlib1g-dev zip unzip
 

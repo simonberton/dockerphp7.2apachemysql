@@ -3,8 +3,8 @@
 # Base from Ubuntu LTS version
 FROM ubuntu:16.04
 
-MAINTAINER Acilia devops <devops@acilia.es>
-LABEL project="Petcoach" version="1.0.0"
+MAINTAINER Simon Berton <simonberton@gmail.com>
+LABEL project="DbServer" version="1.0.0"
 
 # Update Repository, upgrade packages, install basic utils
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y apt-utils vim curl unzip git

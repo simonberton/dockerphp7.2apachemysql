@@ -11,6 +11,17 @@ symfony-web and symfony-dbserver.
 Feel free to change this names on the docker-compose.yml as your needs.
 
 Steps:
+0 - Make an .env file with APP_DIR and APP_PORT
+
+Here is mine as an example:
+
+```
+APP_DIR=/Users/simonberton/Documents/symfony4/symfony
+APP_PORT=8086
+```
+APP_DIR is where your symfony projects is.
+Also: on the web/backend.conf I have set the url, so add that to your hosts file. And accessing it on the port you have set on APP_PORT
+
 
 1 - Install a symfony project with "symfony" as the name folder
 
