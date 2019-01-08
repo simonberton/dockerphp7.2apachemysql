@@ -22,13 +22,16 @@ APP_PORT=8086
 APP_DIR is where your symfony projects is.
 Also: on the web/backend.conf I have set the url, so add that to your hosts file. And accessing it on the port you have set on APP_PORT
 
+For example: www.symfony.local:8086
 
 1 - Install a symfony project with "symfony" as the name folder
 
-2 - On your terminal run: ```docker-exec -it symfony-web bash```
+2.0 - On your terminal run: ```docker-compose up build -d```
 
-2.1 - ```composer install```
+2.1 - ```docker-exec -it symfony-web bash```
 
-2.2 - ```php bin/console doctrine:database:create```
+2.2 - ```composer install```
 
-2.3 - ```php bin/console d:s:u --f```
+2.3 - ```php bin/console doctrine:database:create```
+
+2.4 - ```php bin/console d:s:u --f```
