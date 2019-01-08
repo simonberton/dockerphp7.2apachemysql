@@ -1,0 +1,18 @@
+version: '2'
+services:
+    web:
+        container_name: symfony-web
+        build: ./web
+        links:
+            - dbserver
+        volumes:
+            - ${APP_DIR}:/var/www/app:cached
+        ports:
+            - "${APP_PORT}:80"
+    dbserver:
+        container_name: symfony-dbserver
+        build: ./dbserver
+        volumes:
+            - db_dir:/var/lib/mysql
+volumes:
+    db_dir:
