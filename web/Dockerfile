@@ -32,35 +32,3 @@ WORKDIR /var/www/app
 # EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
-
-
-
-# //SIMON///
-# RUN a2enmod rewrite
-# ADD backend.conf /etc/apache2/sites-available/
-
-# RUN rm /etc/apache2/sites-enabled/000-default.conf
-
-# RUN ln -s /etc/apache2/sites-available/backend.conf /etc/apache2/sites-enabled/06-backend.conf
-
-# RUN echo 'deployer:x:333:333::/home:/bin/bash' >> /etc/passwd
-# RUN echo 'deployer:*:16828:0:99999:7:::' >> /etc/shadow
-# RUN echo 'deployer:x:333:' >> /etc/group
-
-# # RUN phpenmod mcrypt
-
-# # RUN sed -i "s/export APACHE_RUN_USER=www-data/export APACHE_RUN_USER=deployer/" /etc/apache2/envvars
-# # RUN sed -i "s/export APACHE_RUN_GROUP=www-data/export APACHE_RUN_GROUP=deployer/" /etc/apache2/envvars
-
-# # Install Composer
-# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
-
-# EXPOSE 80
-
-# # Copy Run Script
-# ADD bin/run.sh /bin/
-# RUN chmod +x /bin/run.sh
-
-# # Run
-# CMD /bin/run.sh
