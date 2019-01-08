@@ -2,7 +2,8 @@
 Docker for a Symfony 4.2 project
 Using PHP 7.2, mysql and apache.
 
-Install docker compose.
+Install docker compose:
+https://docs.docker.com/compose/
 
 This installation makes 2 images:
 
